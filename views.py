@@ -14,3 +14,5 @@ def helps_index(id=None):
 # Custom error
 def handler404(*k):
 	return "Hmm, not found m8"
+def handler500(*k):
+	return traceback.format_exc(), 200, {'Content-Type':'application/json; charset=UTF-8;'}
